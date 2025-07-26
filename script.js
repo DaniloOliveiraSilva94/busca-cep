@@ -20,7 +20,7 @@ btnBuscar.addEventListener('click', async (event) => {
 
 async function getCep() {
     try {
-      const response = await fetch(`http://viacep.com.br/ws/${inpCep.value}/json/`)
+      const response = await fetch(`http://viacep.com.br/ws/${inpCep.value}/json?callback=meuCallback`)
       if (!response.ok) {
         throw new Error('Erro na requisição: ' + response.status);
       }
